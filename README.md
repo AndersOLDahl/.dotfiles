@@ -1,4 +1,4 @@
-Vim
+Dotfiles
 ===
 
-Vim setup
+Dotfiles and vim setup
