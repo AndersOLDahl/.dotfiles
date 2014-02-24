@@ -31,10 +31,12 @@ highlight LineNr ctermfg=grey ctermbg=black
 set number 
 
 "Tabs and windows easier to navigate
-noremap <C-j> <C-w>w
-noremap <C-k> <C-w>p
-noremap <C-h> gt
-noremap <C-l> gT
+noremap <C-j> <C-w>j
+noremap <C-k> <C-w>k
+noremap <C-h> <C-w>h 
+noremap <C-l> <C-w>l
+noremap <M-j> gt
+noremap <M-k> gT
 inoremap jj <Esc>
 
 "Ctrl-P
@@ -57,9 +59,57 @@ set smartcase
 "4 spaces per indent, auto-indent
 set expandtab
 set shiftwidth=4
-set softtabstop=4
+set softtabstop=20
 set tabstop=4
 set autoindent
 
 "80 characters per line
 set textwidth=80
+
+"Makes Alt key available
+let c='a'
+while c <= 'z'
+      exec "set <A-".c.">=\e".c
+        exec "imap \e".c." <A-".c.">"
+          let c = nr2char(1+char2nr(c))
+      endw
+
+      set timeout ttimeoutlen=50
+
+inoremap  <Up>     <NOP>
+inoremap  <Down>   <NOP>
+inoremap  <Left>   <NOP>
+inoremap  <Right>  <NOP>
+noremap   <Up>     <NOP>
+noremap   <Down>   <NOP>
+noremap   <Left>   <NOP>
+noremap   <Right>  <NOP>
+
+
+"Persistent undo and auto backup
+set backup
+set backupdir=~/.vim/backups
+
+set swapfile
+set dir=~/.vim/swap
+
+set undofile
+set undodir=~/.vim/undo
+set undolevels=1000
+set undoreload=10000
+
+"Better navigation when wrapping
+nnoremap j gj
+nnoremap k gk
+vnoremap j gj
+vnoremap k gk
+
+"Breaks on whitespace
+set wrap linebreak nolist
+
+"Highlight trailing whitespace
+highlight ExtraWhitespace ctermbg=red guibg=red
+match ExtraWhitespace /\s\+$/
+
+"Can move away from a changed buffer without warning
+set hidden
