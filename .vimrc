@@ -113,3 +113,14 @@ match ExtraWhitespace /\s\+$/
 
 "Can move away from a changed buffer without warning
 set hidden
+
+"Save cursor position on save
+fun! <SID>StripTrailingWhitespaces()
+    let l = line(".")
+    let c = col(".")
+    %s/\s\+$//e
+    call cursor(l, c)
+endfun
+
+"Remove trailing whitespaces on save
+autocmd FileType c,cpp,java,php,ruby,python autocmd BufWritePre <buffer> :call <SID>StripTrailingWhitespaces()
