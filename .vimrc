@@ -87,9 +87,6 @@ noremap   <Right>  <NOP>
 
 
 "Persistent undo and auto backup
-set backup
-set backupdir=~/.vim/backups
-
 set swapfile
 set dir=~/.vim/swap
 
