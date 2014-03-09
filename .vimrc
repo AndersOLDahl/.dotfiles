@@ -28,12 +28,12 @@ highlight NonText ctermbg=black
 highlight LineNr ctermfg=grey ctermbg=black
 
 "Line numbers
-set number 
+set number
 
 "Tabs and windows easier to navigate
 noremap <C-j> <C-w>j
 noremap <C-k> <C-w>k
-noremap <C-h> <C-w>h 
+noremap <C-h> <C-w>h
 noremap <C-l> <C-w>l
 noremap <M-j> gt
 noremap <M-k> gT
@@ -60,7 +60,7 @@ set smartcase
 set expandtab
 set shiftwidth=4
 set softtabstop=20
-set tabstop=4
+set tabstop=2
 set autoindent
 
 "80 characters per line
@@ -85,11 +85,7 @@ noremap   <Down>   <NOP>
 noremap   <Left>   <NOP>
 noremap   <Right>  <NOP>
 
-
-"Persistent undo and auto backup
-set swapfile
-set dir=~/.vim/swap
-
+"Persistent undo
 set undofile
 set undodir=~/.vim/undo
 set undolevels=1000
