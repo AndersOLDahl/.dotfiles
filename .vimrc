@@ -58,7 +58,7 @@ set smartcase
 
 "4 spaces per indent, auto-indent
 set expandtab
-set shiftwidth=4
+set shiftwidth=2
 set softtabstop=20
 set tabstop=2
 set autoindent
