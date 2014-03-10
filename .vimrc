@@ -13,6 +13,7 @@ Bundle 'SirVer/ultisnips'
 
 Bundle 'python.vim'
 Bundle 'tpope/vim-rails'
+Bundle 'thoughtbot/vim-rspec'
 
 "Enable filetype plugins"
 filetype plugin on
@@ -46,9 +47,11 @@ set wildignore+=*/tmp/*,*.so,*.swp,*.zip
 "NERDTree"
 nnoremap <F1> :NERDTreeToggle<CR>
 nnoremap <F2> :NERDTreeToggle<CR>
-nnoremap <F3> :NERDTreeToggle<CR>
 let g:NERDTreeDirArrows=0
 let NERDTreeMapActivateNode='<space>'
+
+"RSpec.vim mappings
+map <F3> :call RunAllSpecs()<CR>
 
 "Finds/highlights searches while typing
 set incsearch
