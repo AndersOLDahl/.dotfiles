@@ -54,5 +54,4 @@ warn() {
                   fi
 
                   echo "Update/Install plugins using vundle"
-                  vim -u $dotfiles/vimrc.bundles +BundleInstall! +BundleClean
-                  +qall
+                  vim +PluginInstall +qall

@@ -119,15 +119,16 @@ set hidden
 "Keeps the cursor off the bottom
 set scrolloff=5
 
+"Uncomment the following to have Vim jump to the last position when
+"reopening a file
+if has("autocmd")
+    au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe
+    normal! g'\"" | endif
+endif
+
 "Highlight trailing whitespace
 highlight ExtraWhitespace ctermbg=red guibg=red
 match ExtraWhitespace /\s\+$/
 
-fun! <SID>StripTrailingWhitespaces()
-    let l = line(".")
-    let c = col(".")
-    %s/\s\+$//e
-    call cursor(l, c)
-endfun
-
-autocmd FileType c,cpp,java,php,ruby,python,html,javascript,make autocmd BufWritePre <buffer> :call <SID>StripTrailingWhitespaces()
+"Delete trailing whitespace on save
+autocmd FileType html,ruby,javascript,python,php,c,cpp,java,perl autocmd BufWritePre <buffer> :%s/\s\+$//e
