@@ -69,6 +69,6 @@ export LANG=en_US.UTF-8
 DEFAULT_USER="linok"
 
 export EDITOR="vim"
-export BROWSER="google-chrome"
+export BROWSER="firefox"
 
 alias vi='vim'

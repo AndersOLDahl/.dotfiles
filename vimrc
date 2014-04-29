@@ -59,12 +59,16 @@ set hlsearch
 set ignorecase
 set smartcase
 
-"4 spaces per indent, auto-indent
+"4 spaces per indent, auto-indent default
 set expandtab
-set shiftwidth=2
-set softtabstop=20
-set tabstop=2
+set shiftwidth=4
+set softtabstop=4
+set tabstop=4
 set autoindent
+
+autocmd Filetype html,ruby,javascript,python,php setlocal shiftwidth=2 tabstop=2
+autocmd Filetype c,cpp,java,perl setlocal shiftwidth=4 tabstop=4
+autocmd FileType make set noexpandtab
 
 "80 characters per line
 set textwidth=80
@@ -72,12 +76,12 @@ set textwidth=80
 "Makes Alt key available
 let c='a'
 while c <= 'z'
-      exec "set <A-".c.">=\e".c
-        exec "imap \e".c." <A-".c.">"
-          let c = nr2char(1+char2nr(c))
-      endw
+  exec "set <A-".c.">=\e".c
+  exec "imap \e".c." <A-".c.">"
+  let c = nr2char(1+char2nr(c))
+endw
 
-      set timeout ttimeoutlen=50
+set timeout ttimeoutlen=50
 
 inoremap  <Up>     <NOP>
 inoremap  <Down>   <NOP>
@@ -88,11 +92,17 @@ noremap   <Down>   <NOP>
 noremap   <Left>   <NOP>
 noremap   <Right>  <NOP>
 
-"Persistent undo
+"Persistent undo and auto backup
+"set backup
+"set backupdir=~/.vim/backups
+
+"set swapfile
+"set dir=~/.vim/swap
+
 set undofile
 set undodir=~/.vim/undo
 set undolevels=1000
-set undoreload=10000
+set undoreload=10000"
 
 "Better navigation when wrapping
 nnoremap j gj
@@ -103,14 +113,16 @@ vnoremap k gk
 "Breaks on whitespace
 set wrap linebreak nolist
 
+"Can move away from a changed buffer without warning
+set hidden
+
+"Keeps the cursor off the bottom
+set scrolloff=5
+
 "Highlight trailing whitespace
 highlight ExtraWhitespace ctermbg=red guibg=red
 match ExtraWhitespace /\s\+$/
 
-"Can move away from a changed buffer without warning
-set hidden
-
-"Save cursor position on save
 fun! <SID>StripTrailingWhitespaces()
     let l = line(".")
     let c = col(".")
@@ -118,5 +130,4 @@ fun! <SID>StripTrailingWhitespaces()
     call cursor(l, c)
 endfun
 
-"Remove trailing whitespaces on save
-autocmd FileType c,cpp,java,php,ruby,python autocmd BufWritePre <buffer> :call <SID>StripTrailingWhitespaces()
+autocmd FileType c,cpp,java,php,ruby,python,html,javascript,make autocmd BufWritePre <buffer> :call <SID>StripTrailingWhitespaces()
