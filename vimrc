@@ -1,7 +1,7 @@
 set nocompatible
 filetype off
 
-set rtp+=~/.vim/bundle/Vundle.vim/
+set rtp+=~/.vim/bundle/vundle/
 call vundle#begin()
 
 Bundle 'gmarik/vundle'
@@ -15,9 +15,10 @@ Bundle 'python.vim'
 Bundle 'tpope/vim-rails'
 Bundle 'thoughtbot/vim-rspec'
 
+call vundle#end()
+
 "Enable filetype plugins"
-filetype plugin on
-filetype indent on
+filetype plugin indent on
 
 "Enable syntax highlighting"
 syntax enable
