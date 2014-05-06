@@ -1,8 +1,8 @@
 set nocompatible
 filetype off
 
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+set rtp+=~/.vim/bundle/Vundle.vim/
+call vundle#begin()
 
 Bundle 'gmarik/vundle'
 Bundle 'flazz/vim-colorschemes'
@@ -122,8 +122,7 @@ set scrolloff=5
 "Uncomment the following to have Vim jump to the last position when
 "reopening a file
 if has("autocmd")
-    au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe
-    normal! g'\"" | endif
+    au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
 endif
 
 "Highlight trailing whitespace
