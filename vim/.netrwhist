@@ -1,5 +1,6 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =3
+let g:netrw_dirhist_cnt =4
 let g:netrw_dirhist_1='/home/linok'
 let g:netrw_dirhist_2='/home/ubuntu'
 let g:netrw_dirhist_3='/home/ubuntu/.dotfiles/vim/bundle/vim-colorschemes'
+let g:netrw_dirhist_4='/home/ubuntu/anders_website'
