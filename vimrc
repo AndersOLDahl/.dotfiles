@@ -41,6 +41,13 @@ noremap <M-j> gt
 noremap <M-k> gT
 inoremap jj <Esc>
 
+nunmap q <Nop>
+let mapleader = "q"
+
+nmap <leader>k $
+nmap <leader>j ^
+nmap <leader>h 0
+
 "Ctrl-P
 let g:ctrlp_working_path_mode = 0
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip
