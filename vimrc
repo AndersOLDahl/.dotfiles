@@ -41,7 +41,7 @@ noremap <M-j> gt
 noremap <M-k> gT
 inoremap jj <Esc>
 
-nunmap q <Nop>
+noremap q <Nop>
 let mapleader = "q"
 
 nmap <leader>k $
