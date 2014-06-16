@@ -42,5 +42,9 @@ echo "Setting up vim...\n"
 lnif $dotfiles/vimrc $HOME/.vimrc
 lnif $dotfiles/vim $HOME/.vim
 
+# tmux
+echo "Setting up tmux...\n"
+lnif $dotfiles/tmux.conf $HOME/.tmux.conf
+
 echo "Update/Install plugins using vundle"
 vim +PluginInstall +qall

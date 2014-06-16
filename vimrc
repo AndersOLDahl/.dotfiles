@@ -26,8 +26,9 @@ syntax enable
 "Color scheme and settings"
 set t_Co=256
 colorscheme codeschool
-highlight NonText ctermbg=black
-highlight LineNr ctermfg=grey ctermbg=black
+highlight Normal ctermbg=NONE
+highlight nonText ctermbg=NONE
+highlight LineNr ctermfg=white ctermbg=NONE
 
 "Line numbers
 set number
