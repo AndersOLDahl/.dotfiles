@@ -8,8 +8,9 @@ Bundle 'gmarik/Vundle.vim'
 Bundle 'flazz/vim-colorschemes'
 Bundle 'scrooloose/nerdtree'
 Bundle 'scrooloose/syntastic'
-Bundle 'https://github.com/kien/ctrlp.vim'
-Bundle 'SirVer/ultisnips'
+Bundle 'kien/ctrlp.vim'
+Bundle 'bling/vim-airline'
+Bundle 'msanders/snipmate.vim'
 
 Bundle 'python.vim'
 Bundle 'tpope/vim-rails'
@@ -22,7 +23,6 @@ filetype plugin indent on
 
 "Enable syntax highlighting"
 syntax enable
-
 "Color scheme and settings"
 set t_Co=256
 colorscheme codeschool
@@ -49,6 +49,9 @@ nmap <leader>k $
 nmap <leader>j ^
 nmap <leader>h 0
 
+"Syntastic"
+let g:syntastic_aggregate_errors = 1
+
 "Ctrl-P
 let g:ctrlp_working_path_mode = 0
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip
@@ -56,11 +59,17 @@ set wildignore+=*/tmp/*,*.so,*.swp,*.zip
 "NERDTree"
 nnoremap <F1> :NERDTreeToggle<CR>
 nnoremap <F2> :NERDTreeToggle<CR>
+nnoremap <F3> :NERDTreeToggle<CR>
 let g:NERDTreeDirArrows=0
 let NERDTreeMapActivateNode='<space>'
 
-"RSpec.vim mappings
-map <F3> :call RunAllSpecs()<CR>
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+
+"Vim-Airline
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#left_sep = ' '
+let g:airline#extensions#tabline#left_alt_sep = '|'
+
 
 "Finds/highlights searches while typing
 set incsearch
@@ -101,23 +110,10 @@ noremap   <Down>   <NOP>
 noremap   <Left>   <NOP>
 noremap   <Right>  <NOP>
 
-"Persistent undo and auto backup
-"set backup
-"set backupdir=~/.vim/backups
-
-"set swapfile
-"set dir=~/.vim/swap
-
 set undofile
 set undodir=~/.vim/undo
 set undolevels=1000
 set undoreload=10000"
-
-"Better navigation when wrapping
-nnoremap j gj
-nnoremap k gk
-vnoremap j gj
-vnoremap k gk
 
 "Breaks on whitespace
 set wrap linebreak nolist
