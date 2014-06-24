@@ -11,6 +11,7 @@ Bundle 'scrooloose/syntastic'
 Bundle 'kien/ctrlp.vim'
 Bundle 'bling/vim-airline'
 Bundle 'msanders/snipmate.vim'
+Bundle 'maxbrunsfeld/vim-yankstack'
 
 Bundle 'python.vim'
 Bundle 'tpope/vim-rails'
