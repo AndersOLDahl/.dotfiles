@@ -1,0 +1,9 @@
+Host sec
+    Hostname amplifier.ccs.neu.edu
+    Port 2622
+    User andersoldahl
+    IdentityFile ~/.ssh/id_rsa.pub
+
+Host ccs
+    Hostname login.ccs.neu.edu
+    User linok
