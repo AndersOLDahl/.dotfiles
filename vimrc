@@ -34,6 +34,9 @@ highlight LineNr ctermfg=white ctermbg=NONE
 "Line numbers
 set number
 
+"Add English spell check
+set spelllang=en
+
 "Tabs and windows easier to navigate
 noremap <C-j> <C-w>j
 noremap <C-k> <C-w>k
