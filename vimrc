@@ -35,7 +35,7 @@ highlight LineNr ctermfg=white ctermbg=NONE
 set number
 
 "Add English spell check
-set spelllang=en
+set spell spelllang=en_us
 
 "Tabs and windows easier to navigate
 noremap <C-j> <C-w>j
