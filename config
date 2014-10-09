@@ -7,3 +7,10 @@ Host sec
 Host ccs
     Hostname login.ccs.neu.edu
     User linok
+
+Host gitlab.ccs
+    Hostname guldendraak.ccs.neu.edu
+    Port 60022
+    IdentityFile ~/.ssh/id_rsa.pub
+
+#git clone git@gitlab.ccs:introsec
