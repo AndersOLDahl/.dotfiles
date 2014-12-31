@@ -4,21 +4,20 @@
 # or operating system, you probably want to add a global ignore instead:
 #   git config --global core.excludesfile '~/.gitignore_global'
 
-# Ignore bundler config.
-/.bundle
-
 # Ignore all logfiles and tempfiles.
 /log/*.log
 /tmp
 
-# Ignore other unneeded files.
-database.yml
-doc/
-*.swp
-*~
-.project
+# Mac
 .DS_Store
-.idea
-.secret
-.vim/
-.viminfo/
+
+# Swap and home
+.*.sw*
+*~
+
+# Others
+/.bundle
+.project/*
+.idea/*
+.secret/*
+database.yml
