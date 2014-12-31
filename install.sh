@@ -48,7 +48,7 @@ lnif $dotfiles/tmux.conf $HOME/.tmux.conf
 
 # ssh
 echo "Setting up ssh config...\n"
-lnif $dotfiles/config $HOME/.ssh/.config
+lnif $dotfiles/config $HOME/.ssh/config
 
 echo "Update/Install plugins using vundle"
 vim +PluginInstall +qall
