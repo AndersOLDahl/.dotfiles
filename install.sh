@@ -29,7 +29,7 @@ else
 fi
 
 # zsh
-echo "Setting up bash...\n"
+echo "Setting up zsh...\n"
 lnif $dotfiles/zshrc $HOME/.zshrc
 
 # git
