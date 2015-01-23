@@ -24,6 +24,7 @@ filetype plugin indent on
 syntax enable
 "Color scheme and settings"
 set t_Co=256
+set ruler
 colorscheme codeschool
 highlight Normal ctermbg=NONE
 highlight nonText ctermbg=NONE
