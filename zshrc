@@ -76,3 +76,6 @@ fi
 
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
+
+export JAVA_HOME=$(/usr/libexec/java_home)
+export JDK_HOME=$(/usr/libexec/java_home)
