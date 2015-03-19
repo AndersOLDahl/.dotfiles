@@ -43,6 +43,7 @@ noremap <M-k> gT
 noremap ∆ gt
 noremap ˚ gT
 inoremap jj <Esc>
+inoremap <C-v> <F10><C-r>+<F10>
 
 noremap q <Nop>
 let mapleader = "q"
@@ -62,6 +63,8 @@ set wildignore+=*/tmp/*,*.so,*.swp,*.zip
 nnoremap <F1> :NERDTreeToggle<CR>
 nnoremap <F2> :NERDTreeToggle<CR>
 nnoremap <F3> :NERDTreeToggle<CR>
+set pastetoggle=<F10>
+
 let g:NERDTreeDirArrows=0
 let NERDTreeMapActivateNode='<space>'
 
