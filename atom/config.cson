@@ -10,5 +10,9 @@
     ]
   editor:
     invisibles: {}
+    fontSize: 12
+    showInvisibles: true
+    showIndentGuide: true
+    tabLength: 4
   "autocomplete-plus":
     navigateCompletions: "ctrl-p,ctrl-n"
