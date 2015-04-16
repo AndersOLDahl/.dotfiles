@@ -1,11 +1,4 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =9
-let g:netrw_dirhist_1='/home/linok'
-let g:netrw_dirhist_2='/home/ubuntu'
-let g:netrw_dirhist_3='/home/ubuntu/.dotfiles/vim/bundle/vim-colorschemes'
-let g:netrw_dirhist_4='/home/ubuntu/anders_website'
-let g:netrw_dirhist_5='/home/ubuntu/anders_website/app/views/sessions'
-let g:netrw_dirhist_6='/home/ubuntu/.dotfiles'
-let g:netrw_dirhist_7='/home/linok/.oh-my-zsh'
-let g:netrw_dirhist_8='/Users/adahl/.dotfiles'
-let g:netrw_dirhist_9='/Users/adahl/cio/spec/features/ecomm'
+let g:netrw_dirhist_cnt =2
+let g:netrw_dirhist_1='/Users/adahl/School/app/views/home/homepage_variant'
+let g:netrw_dirhist_2='/Users/adahl/Downloads/react-0.13.1/examples'
