@@ -15,6 +15,9 @@
 .*.sw*
 *~
 
+venv
+*.pyc
+
 # Others
 /.bundle
 .project/*

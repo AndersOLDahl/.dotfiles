@@ -1,4 +1,7 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =2
+let g:netrw_dirhist_cnt =5
 let g:netrw_dirhist_1='/Users/adahl/School/app/views/home/homepage_variant'
 let g:netrw_dirhist_2='/Users/adahl/Downloads/react-0.13.1/examples'
+let g:netrw_dirhist_3='/Users/linok/andersdahl.me/app'
+let g:netrw_dirhist_4='/Users/linok/andersdahl.me/app/static'
+let g:netrw_dirhist_5='/Users/linok/andersdahl.me/app/templates'
