@@ -31,7 +31,7 @@ highlight nonText ctermbg=NONE
 highlight LineNr ctermfg=white ctermbg=NONE
 
 "Line numbers
-set number
+set relativenumber
 
 "Tabs and windows easier to navigate
 noremap <C-j> <C-w>j
