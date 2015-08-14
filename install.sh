@@ -1,6 +1,7 @@
 #!/usr/bin/env sh
 
 dotfiles="$HOME/.dotfiles"
+vundle="$HOME/.dotfiles/vim/bundle/Vundle.vim"
 
 # to error out
 warn() {
@@ -32,23 +33,32 @@ fi
 echo "Setting up zsh...\n"
 lnif $dotfiles/zshrc $HOME/.zshrc
 
+# tmux
+echo "Setting up tmux...\n"
+lnif $dotfiles/tmux.conf $HOME/.tmux.conf
+
 # git
 echo "Setting up git...\n"
 lnif $dotfiles/gitconfig $HOME/.gitconfig
 lnif $dotfiles/gitignore_global $HOME/.gitignore_global
+
+# ssh
+echo "Setting up ssh config...\n"
+lnif $dotfiles/config $HOME/.ssh/config
 
 # vim
 echo "Setting up vim...\n"
 lnif $dotfiles/vimrc $HOME/.vimrc
 lnif $dotfiles/vim $HOME/.vim
 
-# tmux
-echo "Setting up tmux...\n"
-lnif $dotfiles/tmux.conf $HOME/.tmux.conf
-
-# ssh
-echo "Setting up ssh config...\n"
-lnif $dotfiles/config $HOME/.ssh/config
+# Update vim bundles
+if [ ! -e $dotfiles/vim/bundle/Vundle.vim ]; then
+    echo "Cloning Vundle\n"
+    git clone https://github.com/VundleVim/Vundle.vim.git $vundle
+else
+    echo "Updating dotfiles\n"
+    cd $vundle && git pull
+fi
 
 echo "Update/Install plugins using vundle"
 vim +PluginInstall +qall
