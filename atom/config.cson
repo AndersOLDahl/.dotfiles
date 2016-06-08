@@ -1,18 +1,31 @@
 "*":
-  "exception-reporting":
-    userId: "2577ba3d-be84-27f4-1742-155acf12eb9b"
-  welcome:
-    showOnStartup: false
+  "autocomplete-plus":
+    navigateCompletions: "ctrl-p,ctrl-n"
   core:
+    disabledPackages: [
+      "autocomplete-clang"
+      "file-icons"
+      "white-cursor"
+      "vim-mode-plus"
+    ]
+    packagesWithKeymapsDisabled: []
     themes: [
       "one-dark-ui"
       "atom-dark-syntax"
     ]
   editor:
+    fontSize: 15
     invisibles: {}
-    fontSize: 12
-    showInvisibles: true
     showIndentGuide: true
+    showInvisibles: true
     tabLength: 4
-  "autocomplete-plus":
-    navigateCompletions: "ctrl-p,ctrl-n"
+  "exception-reporting":
+    userId: "2577ba3d-be84-27f4-1742-155acf12eb9b"
+  linter:
+    errorPanelHeight: 51
+  "linter-clang": {}
+  minimap: {}
+  tabs:
+    usePreviewTabs: true
+  welcome:
+    showOnStartup: false

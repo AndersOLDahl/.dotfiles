@@ -1,3 +1,12 @@
 Host ccs
     Hostname login.ccs.neu.edu
     User linok
+Host zedboard
+    Hostname 192.168.1.10
+    User user406
+
+# linux-load
+# ssh -p 27 machineName –l yourUserName
+Host coe
+    Hostname gateway.coe.neu.edu
+    User adahl
