@@ -10,6 +10,7 @@ Bundle 'scrooloose/nerdtree'
 Bundle 'scrooloose/syntastic'
 Bundle 'kien/ctrlp.vim'
 Bundle 'bling/vim-airline'
+Bundle 'tpope/vim-surround'
 
 Bundle 'python.vim'
 Bundle 'tpope/vim-rails'
