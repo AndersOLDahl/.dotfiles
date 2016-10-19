@@ -5,16 +5,10 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 Bundle 'gmarik/Vundle.vim'
-Bundle 'flazz/vim-colorschemes'
-Bundle 'scrooloose/nerdtree'
-Bundle 'scrooloose/syntastic'
 Bundle 'kien/ctrlp.vim'
+Bundle 'scrooloose/syntastic'
 Bundle 'bling/vim-airline'
-Bundle 'tpope/vim-surround'
-
-Bundle 'python.vim'
-Bundle 'tpope/vim-rails'
-Bundle 'thoughtbot/vim-rspec'
+Bundle 'flazz/vim-colorschemes'
 
 call vundle#end()
 
@@ -23,16 +17,20 @@ filetype plugin indent on
 
 "Enable syntax highlighting"
 syntax enable
+
 "Color scheme and settings"
 set t_Co=256
-set ruler
 colorscheme codeschool
 highlight Normal ctermbg=NONE
 highlight nonText ctermbg=NONE
-highlight LineNr ctermfg=white ctermbg=NONE
+set ruler
 
 "Line numbers
 set relativenumber
+highlight LineNr ctermfg=white ctermbg=NONE
+
+"Set leader key
+let mapleader = ","
 
 "Tabs and windows easier to navigate
 noremap <C-j> <C-w>j
@@ -45,41 +43,35 @@ noremap ∆ gt
 noremap ˚ gT
 inoremap jj <Esc>
 
-noremap q <Nop>
-let mapleader = "q"
+inoremap  <Up>     <NOP>
+inoremap  <Down>   <NOP>
+inoremap  <Left>   <NOP>
+inoremap  <Right>  <NOP>
+noremap   <Up>     <NOP>
+noremap   <Down>   <NOP>
+noremap   <Left>   <NOP>
+noremap   <Right>  <NOP>
 
-nmap <leader>k $
-nmap <leader>j ^
-nmap <leader>h 0
-
-"Syntastic"
-let g:syntastic_aggregate_errors = 1
+"Paste toggle
+set pastetoggle=<F1>
 
 "Ctrl-P
 let g:ctrlp_working_path_mode = 0
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip
-
-"NERDTree"
-set pastetoggle=<F1>
-nnoremap <F2> :NERDTreeToggle<CR>
-nnoremap <F3> :NERDTreeToggle<CR>
-
-let g:NERDTreeDirArrows=0
-let NERDTreeMapActivateNode='<space>'
-
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
-
-"Vim-Airline
-let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tabline#left_sep = ' '
-let g:airline#extensions#tabline#left_alt_sep = '|'
-
 
 "Finds/highlights searches while typing
 set incsearch
 set hlsearch
 set ignorecase
 set smartcase
+
+"Syntastic"
+let g:syntastic_aggregate_errors = 1
+
+"Vim-Airline
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#left_sep = ' '
+let g:airline#extensions#tabline#left_alt_sep = '|'
 
 "4 spaces per indent, auto-indent default
 set expandtab
@@ -95,6 +87,17 @@ autocmd FileType make set noexpandtab
 "80 characters per line
 set textwidth=80
 
+set undofile
+set undodir=~/.vim/undo
+set undolevels=1000
+set undoreload=10000"
+
+"Can move away from a changed buffer without warning
+set hidden
+
+"Keeps the cursor off the bottom
+set scrolloff=5
+
 "Makes Alt key available
 let c='a'
 while c <= 'z'
@@ -105,34 +108,13 @@ endw
 
 set timeout ttimeoutlen=50
 
-inoremap  <Up>     <NOP>
-inoremap  <Down>   <NOP>
-inoremap  <Left>   <NOP>
-inoremap  <Right>  <NOP>
-noremap   <Up>     <NOP>
-noremap   <Down>   <NOP>
-noremap   <Left>   <NOP>
-noremap   <Right>  <NOP>
-
-set undofile
-set undodir=~/.vim/undo
-set undolevels=1000
-set undoreload=10000"
-
-"Breaks on whitespace
-set wrap linebreak nolist
-
-"Can move away from a changed buffer without warning
-set hidden
-
-"Keeps the cursor off the bottom
-set scrolloff=5
-
-"Uncomment the following to have Vim jump to the last position when
-"reopening a file
+"Jump to last position when opening a file
 if has("autocmd")
     au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
 endif
+
+"Breaks on whitespace
+set wrap linebreak nolist
 
 "Highlight trailing whitespace
 highlight ExtraWhitespace ctermbg=red guibg=red

@@ -19,7 +19,6 @@ venv
 *.pyc
 
 # Others
-/.bundle
 .project/*
 .idea/*
 .secret/*
