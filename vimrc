@@ -80,8 +80,8 @@ set softtabstop=4
 set tabstop=4
 set autoindent
 
-autocmd Filetype html,ruby,javascript,python,php setlocal shiftwidth=2 tabstop=2
-autocmd Filetype c,cpp,java,perl setlocal shiftwidth=4 tabstop=4
+autocmd Filetype html,ruby,javascript,php setlocal shiftwidth=2 tabstop=2
+autocmd Filetype python,c,cpp,java,perl setlocal shiftwidth=4 tabstop=4
 autocmd FileType make set noexpandtab
 
 "80 characters per line
