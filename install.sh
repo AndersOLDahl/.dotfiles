@@ -51,10 +51,6 @@ echo "Setting up vim...\n"
 lnif $dotfiles/vimrc $HOME/.vimrc
 lnif $dotfiles/vim $HOME/.vim
 
-# atom
-echo "Setting up atom...\n"
-lnif $dotfiles/atom $HOME/.atom
-
 # Update vim bundles
 if [ ! -e $dotfiles/vim/bundle/Vundle.vim ]; then
     echo "Cloning Vundle\n"
