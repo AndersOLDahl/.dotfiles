@@ -9,22 +9,25 @@
       "vim-mode-plus"
     ]
     packagesWithKeymapsDisabled: []
+    telemetryConsent: "limited"
     themes: [
       "one-dark-ui"
       "atom-dark-syntax"
     ]
   editor:
     fontSize: 15
-    invisibles: {}
     showIndentGuide: true
     showInvisibles: true
     tabLength: 4
   "exception-reporting":
     userId: "2577ba3d-be84-27f4-1742-155acf12eb9b"
   linter:
-    errorPanelHeight: 51
-  "linter-clang": {}
-  minimap: {}
+    errorPanelHeight: 97
+  "sync-settings":
+    _analyticsUserId: "1fb23e11-9aa8-4f28-9988-9e46728f965d"
+    _lastBackupHash: "1c0fecc130953bce79e5b043a57b4bcac53e653d"
+    gistId: "468a9e1b0a5c165bdb0b5147d7843c3b"
+    personalAccessToken: "c18dbdb8316bb11ce9a0271f862c08183af317d5"
   tabs:
     usePreviewTabs: true
   welcome:
