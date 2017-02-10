@@ -29,3 +29,4 @@ venv
 .idea/*
 .secret/*
 database.yml
+.cache
