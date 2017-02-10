@@ -15,8 +15,14 @@
 .*.sw*
 *~
 
+# Python
 venv
 *.pyc
+.ipynb_checkpoints
+*.egg-info
+
+# Logs
+*.log
 
 # Others
 .project/*
