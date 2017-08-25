@@ -1,18 +1,17 @@
+"Vundle and plugins
 set nocompatible
 filetype off
 
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
-Bundle 'gmarik/Vundle.vim'
-Bundle 'kien/ctrlp.vim'
-Bundle 'scrooloose/syntastic'
-Bundle 'bling/vim-airline'
-Bundle 'flazz/vim-colorschemes'
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'kien/ctrlp.vim'
+Plugin 'scrooloose/syntastic'
+Plugin 'bling/vim-airline'
+Plugin 'flazz/vim-colorschemes'
 
 call vundle#end()
-
-"Enable filetype plugins"
 filetype plugin indent on
 
 "Enable syntax highlighting"
@@ -29,28 +28,16 @@ set ruler
 set relativenumber
 highlight LineNr ctermfg=white ctermbg=NONE
 
-"Set leader key
-let mapleader = ","
-
 "Tabs and windows easier to navigate
 noremap <C-j> <C-w>j
 noremap <C-k> <C-w>k
 noremap <C-h> <C-w>h
 noremap <C-l> <C-w>l
-noremap <M-j> gt
-noremap <M-k> gT
+noremap <a-j> gt
+noremap <a-k> gT
 noremap ∆ gt
 noremap ˚ gT
 inoremap jj <Esc>
-
-inoremap  <Up>     <NOP>
-inoremap  <Down>   <NOP>
-inoremap  <Left>   <NOP>
-inoremap  <Right>  <NOP>
-noremap   <Up>     <NOP>
-noremap   <Down>   <NOP>
-noremap   <Left>   <NOP>
-noremap   <Right>  <NOP>
 
 "Paste toggle
 set pastetoggle=<F1>
@@ -66,7 +53,14 @@ set ignorecase
 set smartcase
 
 "Syntastic"
-let g:syntastic_aggregate_errors = 1
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_wq = 0
+
 
 "Vim-Airline
 let g:airline#extensions#tabline#enabled = 1
@@ -79,10 +73,6 @@ set shiftwidth=4
 set softtabstop=4
 set tabstop=4
 set autoindent
-
-autocmd Filetype html,ruby,javascript,php setlocal shiftwidth=2 tabstop=2
-autocmd Filetype python,c,cpp,java,perl setlocal shiftwidth=4 tabstop=4
-autocmd FileType make set noexpandtab
 
 "80 characters per line
 set textwidth=80
@@ -98,14 +88,7 @@ set hidden
 "Keeps the cursor off the bottom
 set scrolloff=5
 
-"Makes Alt key available
-let c='a'
-while c <= 'z'
-  exec "set <A-".c.">=\e".c
-  exec "imap \e".c." <A-".c.">"
-  let c = nr2char(1+char2nr(c))
-endw
-
+" Esc timeout to work with tmux
 set timeout ttimeoutlen=50
 
 "Jump to last position when opening a file
