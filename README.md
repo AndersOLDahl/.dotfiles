@@ -1,4 +1,4 @@
 Dotfiles
 ===
 
-Dotfiles and vim setup
+Dotfiles for vim, tmux, zsh, git, and IntelliJ
