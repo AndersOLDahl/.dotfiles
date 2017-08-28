@@ -51,6 +51,10 @@ echo "Setting up vim...\n"
 lnif $dotfiles/vimrc $HOME/.vimrc
 lnif $dotfiles/vim $HOME/.vim
 
+# IntelliJ
+echo "Setting up IntelliJ...\n"
+lnif $dotfiles/ideavimrc $HOME/.ideavimrc
+
 # Update vim bundles
 if [ ! -e $dotfiles/vim/bundle/Vundle.vim ]; then
     echo "Cloning Vundle\n"
