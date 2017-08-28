@@ -1,1 +1,11 @@
+set relativenumber
 
+noremap <C-j> <C-w>j
+noremap <C-k> <C-w>k
+noremap <C-h> <C-w>h
+noremap <C-l> <C-w>l
+noremap <a-j> gt
+noremap <a-k> gT
+noremap ∆ gt
+noremap ˚ gT
+inoremap jj <Esc>
