@@ -5,15 +5,22 @@
 #   git config --global core.excludesfile '~/.gitignore_global'
 
 # Ignore all logfiles and tempfiles.
-/log/*.log
 /tmp
+*.cache/
+*.log
 
 # Mac
 .DS_Store
 
-# Swap and home
-.*.sw*
+# Home
 *~
+
+# Vim
+.*.sw*
+
+# IntelliJ
+*.idea/
+*.iml
 
 # Python
 venv
@@ -22,11 +29,3 @@ venv
 */*.egg-info
 */dist/
 */build/
-
-# Logs
-*.log
-
-# Others
-*.iml
-*.idea/
-*.cache/
