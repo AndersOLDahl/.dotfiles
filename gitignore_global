@@ -19,7 +19,7 @@
 venv
 .ipynb_checkpoints
 *.pyc
-/*.egg-info
+*/*.egg-info
 */dist/
 */build/
 
@@ -27,5 +27,5 @@ venv
 *.log
 
 # Others
-*/.idea
-*/.cache
+*.idea/
+*.cache/
