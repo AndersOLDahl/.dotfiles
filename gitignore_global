@@ -17,16 +17,15 @@
 
 # Python
 venv
-*.pyc
 .ipynb_checkpoints
-*.egg-info
+*.pyc
+/*.egg-info
+*/dist/
+*/build/
 
 # Logs
 *.log
 
 # Others
-.project/*
-.idea/*
-.secret/*
-database.yml
-.cache
+*/.idea
+*/.cache
