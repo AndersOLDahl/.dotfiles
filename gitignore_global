@@ -27,5 +27,6 @@ venv
 *.log
 
 # Others
+*.iml
 *.idea/
 *.cache/
