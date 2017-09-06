@@ -1,11 +1,13 @@
 set relativenumber
 
-noremap <C-j> <C-w>j
-noremap <C-k> <C-w>k
-noremap <C-h> <C-w>h
-noremap <C-l> <C-w>l
 noremap <a-j> gt
 noremap <a-k> gT
 inoremap jj <Esc>
 
 nmap g] :action GotoImplementation<CR>
+
+"In IDE changes
+"<C-k> to Up
+"<C-j> to Down
+"<a-o> to Quick Doc
+"<a-i> to Error Description
