@@ -11,3 +11,7 @@ nmap g] :action GotoImplementation<CR>
 "<C-j> to Down
 "<a-o> to Quick Doc
 "<a-i> to Error Description
+
+" Change java tabs to 2, similar to Google
+" Plugins: checkstyle, python, take down unused plugins.
+" Change linewidth to 80
