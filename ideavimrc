@@ -4,20 +4,24 @@ noremap <a-j> gt
 noremap <a-k> gT
 inoremap jj <Esc>
 
-nnoremap g] :action GotoImplementation<CR>
-nnoremap g[ :action GotoSuperMethod<cr>
-
-" easy system clipboard copy/paste
 noremap <space>y "*y
 noremap <space>Y "*Y
 noremap <space>p "*p
 noremap <space>P "*P
 
+nnoremap g] :action GotoImplementation<CR>
+nnoremap g[ :action GotoSuperMethod<cr>
+
 nnoremap <space>u :action FindUsages<cr>
 nnoremap <space>T :action GotoSymbol<cr>
 nnoremap <space>a :action GotoAction<cr>
-
 nnoremap <space>rr :action RenameElement<cr>
+
+nnoremap \r :action RunClass<cr>
+nnoremap \R :action Run<cr>
+nnoremap \d :action DebugClass<cr>
+nnoremap \D :action Debug<cr>
+nnoremap \c :action CheckStyleCurrentFileAction<cr>
 
 " In IDE changes
 " <C-k> to Up
