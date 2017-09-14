@@ -1,15 +1,16 @@
 set relativenumber
 
+" Vim remaps
 noremap <a-j> gt
 noremap <a-k> gT
 inoremap jj <Esc>
-
 noremap <space>y "*y
 noremap <space>Y "*Y
 noremap <space>p "*p
 noremap <space>P "*P
 
-nnoremap g] :action GotoImplementation<CR>
+" IntelliJ remaps
+nnoremap g] :action GotoImplementation<cr>
 nnoremap g[ :action GotoSuperMethod<cr>
 
 nnoremap <space>u :action FindUsages<cr>
