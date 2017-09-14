@@ -4,14 +4,23 @@ noremap <a-j> gt
 noremap <a-k> gT
 inoremap jj <Esc>
 
-nmap g] :action GotoImplementation<CR>
+nnoremap g] :action GotoImplementation<CR>
+nnoremap g[ :action GotoSuperMethod<cr>
 
-"In IDE changes
-"<C-k> to Up
-"<C-j> to Down
-"<a-o> to Quick Doc
-"<a-i> to Error Description
+" easy system clipboard copy/paste
+noremap <space>y "*y
+noremap <space>Y "*Y
+noremap <space>p "*p
+noremap <space>P "*P
 
-" Change java tabs to 2, similar to Google
-" Plugins: checkstyle, python, take down unused plugins.
-" Change linewidth to 80
+nnoremap <space>u :action FindUsages<cr>
+nnoremap <space>T :action GotoSymbol<cr>
+nnoremap <space>a :action GotoAction<cr>
+
+nnoremap <space>rr :action RenameElement<cr>
+
+" In IDE changes
+" <C-k> to Up
+" <C-j> to Down
+" <a-o> to Quick Doc
+" <a-i> to Error Description
