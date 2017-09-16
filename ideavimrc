@@ -1,5 +1,11 @@
 set relativenumber
 
+"Finds/highlights searches while typing
+set incsearch
+set hlsearch
+set ignorecase
+set smartcase
+
 " Vim remaps
 noremap <a-j> gt
 noremap <a-k> gT
