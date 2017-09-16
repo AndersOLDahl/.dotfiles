@@ -1,6 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =4
-let g:netrw_dirhist_1='/Users/linok/Desktop/software_development/software_development/app/views/microsite'
-let g:netrw_dirhist_2='/Users/linok/Desktop/software_development/software_development'
-let g:netrw_dirhist_3='/Users/linok/Desktop/Embedded Des Enabling Robotics/lab4/Lab4a'
-let g:netrw_dirhist_4='/Users/linok/.atom'
