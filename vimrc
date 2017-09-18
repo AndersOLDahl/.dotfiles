@@ -39,6 +39,12 @@ noremap ∆ gt
 noremap ˚ gT
 inoremap jj <Esc>
 
+noremap \y "*y
+noremap \yy "*yy
+noremap \Y "*Y
+noremap \p "*p
+noremap \P "*P
+
 "Paste toggle
 set pastetoggle=<F1>
 
