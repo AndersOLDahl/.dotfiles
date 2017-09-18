@@ -10,32 +10,40 @@ set smartcase
 noremap <a-j> gt
 noremap <a-k> gT
 inoremap jj <Esc>
-noremap <space>y "*y
-noremap <space>Y "*Y
-noremap <space>p "*p
-noremap <space>P "*P
+
+noremap \y "*y
+noremap \yy "*yy
+noremap \Y "*Y
+noremap \p "*p
+noremap \P "*P
 
 " IntelliJ remaps
+nnoremap gc :action GotoClass<cr>
+nnoremap gf :action GotoFile<cr>
+nnoremap gs :action GotoSymbol<cr>
 nnoremap g] :action GotoImplementation<cr>
 nnoremap g[ :action GotoSuperMethod<cr>
+nnoremap gt :action GotoTypeDeclaration<cr>
 
-nnoremap <space>u :action FindUsages<cr>
-nnoremap <space>T :action GotoSymbol<cr>
-nnoremap <space>a :action GotoAction<cr>
-nnoremap <space>rr :action RenameElement<cr>
+nnoremap <a-l> :action GotoNextError<cr>
+nnoremap <a-h> :action GotoPreviousError<cr>
+nnoremap <a-o> :action ShowErrorDescription<cr>
+nnoremap <a-;> :action OptimizeImports<cr>
 
 nnoremap \r :action RunClass<cr>
 nnoremap \R :action Run<cr>
 nnoremap \d :action DebugClass<cr>
 nnoremap \D :action Debug<cr>
 nnoremap \c :action CheckStyleCurrentFileAction<cr>
+nnoremap \q :action QuickJavaDoc<cr>
+nnoremap \p :action ParameterInfo <cr>
 
-" In IDE changes
+nnoremap \e :action RenameElement<cr>
+nnoremap \f :action RenameFile<cr>
+nnoremap \u :action FindUsages<cr>
+
 " <C-k> to Up
 " <C-j> to Down
-" <a-o> to Quick Doc
-" <a-i> to Error Description
 
-" Change java tabs to 2, similar to Google
-" Plugins: checkstyle, python, take down unused plugins.
-" Change linewidth to 80
+" Activate Google checkstyle, line width 80, Dracula theme
+" Plugins - Checkstyle, CodeGlance, IdeaVim, Python
