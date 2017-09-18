@@ -35,7 +35,7 @@ nnoremap \R :action Run<cr>
 nnoremap \d :action DebugClass<cr>
 nnoremap \D :action Debug<cr>
 nnoremap \c :action CheckStyleCurrentFileAction<cr>
-nnoremap \q :action QuickJavaDoc<cr>
+nnoremap \; :action QuickJavaDoc<cr>
 nnoremap \p :action ParameterInfo <cr>
 
 nnoremap \e :action RenameElement<cr>
