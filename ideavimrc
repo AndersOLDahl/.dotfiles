@@ -46,4 +46,4 @@ nnoremap \u :action FindUsages<cr>
 " <C-j> to Down
 
 " Activate Google checkstyle, line width 80, Dracula theme
-" Plugins - Checkstyle, CodeGlance, IdeaVim, Python
+" Plugins - Checkstyle, CodeGlance, Docker, IdeaVim, Python
