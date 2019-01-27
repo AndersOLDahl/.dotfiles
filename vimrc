@@ -3,10 +3,12 @@ set nocompatible
 filetype off
 
 set rtp+=~/.vim/bundle/Vundle.vim
+set rtp+=/usr/local/opt/fzf
 call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
-Plugin 'kien/ctrlp.vim'
+Plugin 'w0rp/ale'
+Plugin 'junegunn/fzf.vim'
 Plugin 'scrooloose/syntastic'
 Plugin 'bling/vim-airline'
 Plugin 'flazz/vim-colorschemes'
@@ -26,6 +28,7 @@ set ruler
 
 "Line numbers
 set relativenumber
+set number
 highlight LineNr ctermfg=white ctermbg=NONE
 
 "Tabs and windows easier to navigate
@@ -45,28 +48,14 @@ noremap \Y "*Y
 noremap \p "*p
 noremap \P "*P
 
-"Paste toggle
-set pastetoggle=<F1>
-
-"Ctrl-P
-let g:ctrlp_working_path_mode = 0
-set wildignore+=*/tmp/*,*.so,*.swp,*.zip
-
 "Finds/highlights searches while typing
 set incsearch
 set hlsearch
 set ignorecase
 set smartcase
 
-"Syntastic"
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_wq = 0
-
+"FZF
+nnoremap <silent> <C-p> :FZF<CR>
 
 "Vim-Airline
 let g:airline#extensions#tabline#enabled = 1
