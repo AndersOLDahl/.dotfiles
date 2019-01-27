@@ -1,4 +1,5 @@
 set relativenumber
+set number
 
 "Finds/highlights searches while typing
 set incsearch
@@ -18,6 +19,8 @@ noremap \p "*p
 noremap \P "*P
 
 " IntelliJ remaps
+nnoremap \g :action Generate<cr>
+
 nnoremap gc :action GotoClass<cr>
 nnoremap gf :action GotoFile<cr>
 nnoremap gs :action GotoSymbol<cr>
