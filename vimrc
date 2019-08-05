@@ -30,6 +30,9 @@ set relativenumber
 set number
 highlight LineNr ctermfg=white ctermbg=NONE
 
+"Backspace turned on
+set backspace=indent,eol,start
+
 "Tabs and windows easier to navigate
 noremap <C-j> <C-w>j
 noremap <C-k> <C-w>k
