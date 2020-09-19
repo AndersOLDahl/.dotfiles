@@ -44,6 +44,7 @@ nnoremap \p :action ParameterInfo <cr>
 nnoremap \e :action RenameElement<cr>
 nnoremap \f :action RenameFile<cr>
 nnoremap \u :action FindUsages<cr>
+nnoremap \s :action FindInPath<cr>
 
 " <C-k> to Up
 " <C-j> to Down
